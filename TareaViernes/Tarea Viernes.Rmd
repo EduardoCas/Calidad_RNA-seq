@@ -1,0 +1,18 @@
+---
+title: "Comentario tarea."
+author: "Eduardo Castro T."
+date: "April 1, 2016"
+output: html_document
+---
+
+#Tarea#
+
+Despues de revisar las secuencias en crudo observe que los archivos eran semejantes, ya que las graficas presentaban coportamientos muy parecidos e incluso tenian tachados los mismos criterios o certificados de pase de control, por lo cual decidi aplicar el mismo comando que se aplico en clase:
+
+$ java -jar /home/usuario/secuenciación/FastQC_Short/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467142.fastq Trimmed_Partial_SRR2467142.fastq ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 HEADCROP:10 SLIDINGWINDOW:4:15 MINLEN:60
+
+
+Con lo anterior solicitamos al trimmomatic que corte los primeros diez nucleotidos de la direccion 5', ventana de 4 nucleotidos con un promedio de 15, y que el minimo de secuencias sea de 60 nucleotidos. 
+
+
+Posteriormente al analizar los archivos html antes (crudos) y despues (procesados) del corte, observe que aquellos certificados de pase de control que en los archivos crudos se encontraban con una tacha, ahora ya habian sido aceptado o marcados con advertencia. 
