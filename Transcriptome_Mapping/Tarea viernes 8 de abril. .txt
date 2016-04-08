@@ -1,0 +1,14 @@
+﻿
+Primero se genera el indice. 
+
+bowtie2-build Trinity.fasta Transcriptoma
+
+Ahora mapeamos las lecturas con el transcriptoma
+
+tophat2 -T Transcriptoma  Sp.log.left.fq.P.qtrim.gz,Sp.hs.left.fq.P.qtrim.gz,Sp.ds.left.fq.P.qtrim.gz,Sp.plat.left.fq.P.qtrim.gz  Sp.log.right.fq.P.qtrim.gz,Sp.hs.right.fq.P.qtrim.gz,Sp.ds.right.fq.P.qtrim.gz,Sp.plat.right.fq.P.qtrim.gz
+
+Ordenamos
+
+samtools sort Transcriptome_Mapping.bam Transcriptome_Mapping  
+E indexamos. 
+samtools sort Transcriptome_Mapping.bam Transcriptome_Mapping  
